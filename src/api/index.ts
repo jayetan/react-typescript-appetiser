@@ -194,13 +194,10 @@ export const onResendVerification = async (email: string) => {
     const { data } = await Axios.request(requestConfig);
     const response: IUserResponse = data;
 
-    console.log(response);
-
     return response;
 
   } catch (error) {
     const { data } = error.response;
-    console.log(data);
     return data;
   }
 }

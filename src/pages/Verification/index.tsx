@@ -15,7 +15,6 @@ function Verification(): ReactElement {
 
   const verify = async () => {
     const response = await onVerify(code, email);
-    console.log(response);
 
     if (response.http_status === 200) {
       history.push('/dashboard');
